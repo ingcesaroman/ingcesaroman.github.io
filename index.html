@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,40 +7,75 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+    <!-- Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!-- Styles -->
     <link rel="stylesheet" href="./css/style.css">
     <!-- Title -->
-    <title>IngCesaroman GithubPage</title>
-
+    <title>Personal Portafolio</title>
 </head>
 <body>
-    <!-- Begin Header -->
-    <header class="header">
-        <img class="header__img" src="https://pages.github.com/images/logo.svg" alt="host in Github Pages">
-        <div class="header__profile">
-            <img src="https://avatars.githubusercontent.com/u/19216361?v=4" alt="user">
+    <!-- START NAV -->
+    <nav class="navbar navbar-dark bg-primary navbar-expand-md flex-row-reverse fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img alt="ingcesaroman's avatar" src="https://avatars.githubusercontent.com/u/19216361?s=400&amp;u=b26a1eeb08ff41e289ba65d78685b9b3fe9e305f&amp;v=4" class="avatar img-responsive">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#welcome-section">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects">Work</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#contact" aria-disabled="true">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </header>
-    <!-- End Header -->
-    <!-- Begin Main Content -->
-    <main class="main">
-        <section class="main__conteiner">
-            <h1 class="text animated pulse">Coming soon</h1>
-            <p class="main__conteiner--detail"> Página en construcción</p>
-        </section>
-    </main>
-    <!-- End Main Content -->
-    <!-- Begin Footer -->
-    <footer class="footer">
-        <section class="footer__conteiner">
-            <a href="/">Home</a>
-            <em>•</em>
-            <a href="/">Github</a>
-            <em>•</em>
-            <a href="/">Contactame</a>
-        </section>
-        
-    </footer>
-    <!-- End Footer -->
+      </nav>
+      <!-- END NAV -->
+      <!-- START WELCOME SECTION -->
+      <section id="welcome-section" class="welcome-section">
+        <h1 class="">Hey I am Cesar <span>👋</span></h1>
+        <p class="text-primary">a QA Engineer and web deveolpment</p>
+      </section>
+      <!-- END WELCOME SECTION -->
+      <!-- START PROJECTS SECTION -->
+      <section id="projects" class="projects-section">
+
+      </section>
+      <!-- END PROJECTS SECTION -->
+      <!-- START CONTACT SECTION -->
+      <section id="contact" class="contact-section">
+        <div class="contact-section-header">
+            <h2>Let's work together...</h2>
+            <p>How do you take your coffee?</p>
+        </div>
+        <div class="contact-links">
+            <a href="https://facebook.com" target="_blank" class="btn btn-link contact-details"><i class="bi bi-facebook"></i> Facebook</a>
+            <a id="profile-link" href="https://github.com/ingcesaroman" target="_blank" class="btn btn-link contact-details"><i class="bi bi-github"></i></i> GitHub</a>
+            <a href="https://twitter.com" target="_blank" class="btn btn-link contact-details"><i class="bi bi-twitter"></i> Twitter</a>
+            <a href="mailto:ing.cesaroman@gmail.com" class="btn btn-link contact-details"><i class="bi bi-at"></i> Send a mail</a>
+            <a href="https://t.me/soycesaroman" target="_blank" class="btn btn-link contact-details"><i class="bi bi-telegram"></i> Send Massage </a>
+        </div>
+      </section>
+      <!-- END CONTACT SECTION -->
 </body>
+<footer>
+    <p>
+      **This is a portfolio under construction.
+    </p>
+    <p>
+      Created with <span>❤️ </span> by Cesar</a>
+    </p>
+  </footer>
+  
+  <!-- END FOOTER SECTION -->
 </html>
