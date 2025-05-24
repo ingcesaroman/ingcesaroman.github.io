@@ -6,7 +6,7 @@ const app = express()
     res.send('<h1> Hello Thies is a new Page!! </h1>')
 }) */
 app.get('', (req, res) => {
-    console.log("Root REQUEST")
+  console.log("Root REQUEST")
     res.send('<h1> Hello This is a new Page!! </h1>')
 });
 
