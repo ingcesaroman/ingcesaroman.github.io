@@ -8,10 +8,11 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <FaRobot className="w-6 h-6 text-emerald-400" />
-              <span className="text-xl font-bold text-white">Cesar Roman</span>
+              <span className="text-xl font-bold text-white">Hecho con ❤️ by Cesar Roman & IA</span>
             </div>
             <p className="text-gray-400">
-              Software Testing Engineer & AI Enthusiast
+              QA Automation Engineer, Web & Mobile Developer<br />
+              AI Enthusiast
             </p>
           </div>
 
@@ -53,7 +54,7 @@ export default function Footer() {
                 <FaGithub className="w-6 h-6" />
               </a>
               <a
-                href="https://linkedin.com/in/ingcesaroman"
+                href="https://www.linkedin.com/in/cesar-roman-santillan/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors duration-300"
@@ -61,7 +62,7 @@ export default function Footer() {
                 <FaLinkedin className="w-6 h-6" />
               </a>
               <a
-                href="mailto:contact@example.com"
+                href="mailto:ing.cesaroman@gmail.com"
                 className="text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <FaEnvelope className="w-6 h-6" />

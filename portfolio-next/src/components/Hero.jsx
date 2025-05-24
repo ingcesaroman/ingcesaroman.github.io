@@ -94,7 +94,7 @@ export default function Hero() {
               <FaGithub className="w-6 h-6" />
             </a>
             <a
-              href="https://linkedin.com/in/ingcesaroman"
+              href="https://www.linkedin.com/in/cesar-roman-santillan/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors duration-300"

@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion';
 import { FaRobot, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { useState } from 'react';
 
 export default function Contact() {
+  const [submitted, setSubmitted] = useState(false);
   return (
     <section id="contact" className="py-20 bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,11 +43,11 @@ export default function Contact() {
             </h3>
             <div className="space-y-6">
               <a
-                href="mailto:contact@example.com"
+                href="mailto:ing.cesaroman@gmail.com"
                 className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <FaEnvelope className="w-6 h-6 text-emerald-400" />
-                <span>contact@example.com</span>
+                <span>ing.cesaroman@gmail.com</span>
               </a>
               <a
                 href="https://github.com/ingcesaroman"
@@ -57,13 +59,13 @@ export default function Contact() {
                 <span>github.com/ingcesaroman</span>
               </a>
               <a
-                href="https://linkedin.com/in/ingcesaroman"
+                href="https://www.linkedin.com/in/cesar-roman-santillan/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors duration-300"
               >
                 <FaLinkedin className="w-6 h-6 text-emerald-400" />
-                <span>linkedin.com/in/ingcesaroman</span>
+                <span>linkedin.com/in/cesar-roman-santillan</span>
               </a>
             </div>
           </motion.div>
@@ -78,47 +80,66 @@ export default function Contact() {
             <h3 className="text-2xl font-semibold text-white mb-6">
               Send a Message
             </h3>
-            <form className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500"
-                  placeholder="Your name"
-                />
+            {submitted ? (
+              <div className="p-4 bg-emerald-600/20 border border-emerald-500 text-emerald-300 rounded-lg text-center">
+                Thank you for your message! I will get in touch with you as soon as possible.
               </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500"
-                  placeholder="Your message"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full px-6 py-3 bg-emerald-500 text-white font-medium rounded-lg hover:bg-emerald-600 transition-colors duration-300"
+            ) : (
+              <form 
+                action="https://formspree.io/f/xovdzgzq"
+                method="POST"
+                className="space-y-6"
+                onSubmit={e => {
+                  setSubmitted(true);
+                }}
               >
-                Send Message
-              </button>
-            </form>
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="w-full px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    rows={4}
+                    className="w-full px-4 py-2 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500"
+                    placeholder="Your message"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full px-6 py-3 bg-emerald-500 text-white font-medium rounded-lg hover:bg-emerald-600 transition-colors duration-300"
+                >
+                  Send Message
+                </button>
+              </form>
+            )}
           </motion.div>
         </div>
       </div>
