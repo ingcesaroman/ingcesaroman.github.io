@@ -6,67 +6,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import ContainerBlogs from './ContainerBlogs';
 import ReactMarkdown from 'react-markdown';
-
-const blogPosts = [
-  {
-    title: 'The Future of AI in Software Testing',
-    excerpt: 'Exploring how artificial intelligence is revolutionizing the way we approach software testing and quality assurance.',
-    image: '/images/ai-software-testing.webp',
-    date: 'March 15, 2025',
-    readTime: '7 min read',
-    aiEnhanced: true,
-    content: `
-  Artificial Intelligence (AI) is no longer just a buzzword—it's actively transforming the landscape of software testing. By automating repetitive tasks, generating intelligent test cases, and providing predictive analytics, AI is making testing more efficient, reliable, and scalable.
-  
-  ## AI vs. Machine Learning in Testing
-  
-  AI is the broader concept of creating intelligent systems that can mimic human thought processes, while machine learning (ML) is a subset focused on learning from data. In software testing, ML algorithms can analyze user behavior, generate test cases, and even predict where bugs are most likely to occur.
-  
-  ## Key Benefits of AI in Software Testing
-  
-  - **Automated Test Creation:** AI can generate and maintain test scripts automatically, reducing manual effort and keeping up with rapid development cycles.
-  - **Bug Detection & Predictive Analytics:** Machine learning models can analyze historical data to identify patterns, predict potential failures, and suggest areas that need more testing.
-  - **Comprehensive Test Coverage:** AI-driven tools can ensure that even the most complex user flows are tested, improving overall software quality.
-  - **Performance Optimization:** By analyzing performance data, AI can help identify bottlenecks and recommend optimizations.
-  
-  ## Limitations and Ethical Considerations
-  
-  While AI brings many advantages, it also has limitations:
-  - **Data Dependency:** The quality of AI-driven testing depends on the quality and quantity of data available.
-  - **Lack of Human Intuition:** AI excels at pattern recognition but cannot fully replicate human creativity and intuition.
-  - **Ethical Concerns:** Issues like bias in training data, privacy, and explainability must be addressed to ensure trustworthy AI testing.
-  
-  ## The Future
-  
-  The future of software testing is a collaborative approach, where AI augments human testers. Testers will need to develop new skills in data analysis, AI fundamentals, and automation to thrive in this evolving landscape.
-  
-  > "AI is unlikely to fully supplant traditional software testing methodologies but will augment and enhance them."  
-  > — [Frugal Testing](https://www.frugaltesting.com/blog/the-future-of-ai-in-software-testing)
-  
-  For more, see [Perfecto's take on AI in testing](https://www.perfecto.io/blog/ai-in-software-testing).
-  
-  ---
-  `
-  },
-  {
-    title: 'Best Practices for Test Automation',
-    excerpt: 'A comprehensive guide to implementing effective test automation strategies in modern software development.',
-    image: '/images/blog2.webp',
-    date: 'March 10, 2025',
-    readTime: '7 min read',
-    aiEnhanced: false,
-    content: `Test automation is essential for delivering high-quality software at speed. This post covers the best practices for setting up a robust automation framework, choosing the right tools, writing maintainable test scripts, and integrating automation into your CI/CD pipeline. Learn how to avoid common pitfalls and maximize the ROI of your automation efforts.`
-  },
-  {
-    title: 'AI-Driven Test Case Generation',
-    excerpt: 'How machine learning algorithms are helping create more efficient and comprehensive test cases.',
-    image: '/images/blog3.jpg',
-    date: 'March 5, 2025',
-    readTime: '6 min read',
-    aiEnhanced: true,
-    content: `Machine learning is enabling the automatic generation of test cases based on application behavior and user data. This article delves into the techniques used for AI-driven test case generation, the benefits over traditional methods, and real-world examples of how organizations are leveraging this technology to improve test coverage and reduce manual effort.`
-  }
-];
+import blogPosts from '../data/blogPosts';
 
 const containerVariants = {
   hidden: { opacity: 0 },

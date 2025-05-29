@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <FaRobot className="w-6 h-6 text-emerald-400" />
-              <span className="text-xl font-bold text-white">Hecho con ❤️ by Cesar Roman & IA</span>
+              <span className="text-xl font-bold text-white">Made with ❤️ by Cesar Roman & AI</span>
             </div>
             <p className="text-gray-400">
               QA Automation Engineer, Web & Mobile Developer<br />
